@@ -22,18 +22,17 @@ This repository demonstrates the implementation of GraphQL in a Spring Boot appl
    mvn install
    ```
 4. Create a new MySQL schema by the name: "restaurant" and run the following query
-
-   ```sh
-   CREATE TABLE `menu` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `dish_name` VARCHAR(256) NOT NULL,
-  `description` VARCHAR(1024) NULL,
-  `price` INT NOT NULL,
-  `available` TINYINT(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `dish_name_UNIQUE` (`dish_name` ASC) VISIBLE
+  ```sql
+CREATE TABLE menu (
+id INT NOT NULL AUTO_INCREMENT,
+dish_name VARCHAR(256) NOT NULL,
+description VARCHAR(1024) NULL,
+price INT NOT NULL,
+available TINYINT(1) NOT NULL DEFAULT '0',
+PRIMARY KEY (id),
+UNIQUE INDEX dish_name_UNIQUE (dish_name ASC) VISIBLE
 );
-   ```
+```
 
 ## Usage
 
